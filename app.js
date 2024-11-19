@@ -38,13 +38,16 @@ app.put('/posts/:id', (req, res) => {
 })
 
 // modify
-
 app.patch('/posts/:id', (req, res) => {
     const id = req.params.id
     res.send(`Modifico il post con id: ${id}`)
 })
 
-
+// destroy
+router.delete('/posts/:id', (req, res) => {
+	const id = req.params.id
+	res.send(`Elimino il post con id: ${id}`)
+})
 
 
 

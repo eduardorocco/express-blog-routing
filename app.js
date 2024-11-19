@@ -1,7 +1,10 @@
 const express = require('express')
 const app = express()
 const port = 3000
-const posts = require('./posts.js')
+const posts = require('./data/posts.js')
+
+
+
 app.use(express.static('public'))
 
 // console.log(posts);
@@ -48,11 +51,6 @@ app.delete('/posts/:id', (req, res) => {
 	const id = req.params.id
 	res.send(`Elimino il post con id: ${id}`)
 })
-
-
-
-
-
 
 app.listen(port,() => {
     console.log(`Server listening on port: ${port}`);

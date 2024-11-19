@@ -9,12 +9,12 @@ app.use(express.static('public'))
 ///////////CRUD/////////////////
 
 // index
-app.get('/', (req, res) => {
+app.get('/posts', (req, res) => {
     res.json(posts)
 })
 
 // show
-app.get('/:id',(req, res) => {
+app.get('/posts/:id',(req, res) => {
     const id = parseInt(req.params.id)
     const post = posts.find((el) => el.id === id)
 

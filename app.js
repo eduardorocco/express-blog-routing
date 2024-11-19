@@ -44,7 +44,7 @@ app.patch('/posts/:id', (req, res) => {
 })
 
 // destroy
-router.delete('/posts/:id', (req, res) => {
+app.delete('/posts/:id', (req, res) => {
 	const id = req.params.id
 	res.send(`Elimino il post con id: ${id}`)
 })

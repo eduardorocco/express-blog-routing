@@ -26,6 +26,30 @@ app.get('/posts/:id',(req, res) => {
     }
 })
 
+// store 
+app.post('/posts', (req, res) => {
+    res.send('Creo un nuovo post')
+})
+
+// update
+app.put('/posts/:id', (req, res) => {
+    const id = req.params.id
+    res.send(`Aggiorno il post con id: ${id}`)
+})
+
+// modify
+
+app.patch('/posts/:id', (req, res) => {
+    const id = req.params.id
+    res.send(`Modifico il post con id: ${id}`)
+})
+
+
+
+
+
+
+
 
 app.listen(port,() => {
     console.log(`Server listening on port: ${port}`);

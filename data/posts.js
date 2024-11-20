@@ -43,8 +43,8 @@ const posts = [
   },
 ];
 
-posts.forEach((array,index) => {
-  array.id = index + 1
+posts.forEach((arrayEl,index) => {
+  arrayEl.id = index + 1
 })
 
 module.exports = posts;

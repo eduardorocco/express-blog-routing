@@ -17,22 +17,23 @@ router.get('/', (req, res) => {
 
 //     if (post){
 //         console.log(`Ecco il post con id: ${id}`)
-//         res.json(post)
-//     } else {
+//          res.json(post)
+//      } else {
 //         res.json({message: `Post con id: ${id} non trovato`})
 //     }
 // })
+
 
 // show con slug
 router.get('/:slug', (req, res) => {
     const slug = req.params.slug
     const post = posts.find((el) => el.slug === slug)
 
-    if(post){
+    if (post) {
         console.log(`Ecco il post con slug: ${slug}`);
         res.json(post)
     } else {
-        res.json({message: `Post con slug ${slug} non trovato`})
+        res.json({ message: `Post con slug ${slug} non trovato` })
     }
 })
 
@@ -55,8 +56,8 @@ router.patch('/:id', (req, res) => {
 
 // destroy
 router.delete('/:id', (req, res) => {
-	const id = req.params.id
-	res.send(`Elimino il post con id: ${id}`)
+    const id = req.params.id
+    res.send(`Elimino il post con id: ${id}`)
 })
 
 module.exports = router
